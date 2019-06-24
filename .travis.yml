@@ -7,4 +7,4 @@ before_install:
   - docker build -t docker-react-travisci -f Dockerfile.dev .
 
 script:
-  - docker run docker-react-travisci npm run test -- --coverage
+  - docker run -e CI=true docker-react-travisci npm run test
